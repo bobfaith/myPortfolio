@@ -1,0 +1,147 @@
+body {
+--black : #1d192c;
+--deep-black: #131023;
+--yellow: #f9c858;
+--white: #f7f7ff;
+}
+
+* { 
+    font-family: 'Oswald', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.first_section {
+    position: fixed;
+    height: 100vh;
+    inset: 0 0 0 0;
+    background-color: var(--deep-black);
+}
+
+.first_name_section {
+    position: absolute;
+    top: 28px;
+    left: 72px;
+    z-index: 1;
+}
+
+.first_name_section > h5 {
+    color: var(--white);
+    font-size: 48px;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.first_name_section > p {
+    color: var(--yellow);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.first_innerbody {
+    position: absolute;
+    inset: 56px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    padding: 0px 24px;
+    border-radius: 16px;
+}
+
+.first_right_half {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 2s ease-in-out, opacity 2s linear;
+}
+
+.first_left_half {
+    width: 40%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    transition: transform 2s ease-in-out, opacity 2s linear ;
+}
+
+.first_left_half > img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    filter: grayscale(100%);
+}
+
+.first_right_half > h1 {
+    color : var(--yellow);
+    font-size: 66px;
+    line-height: 1;
+}
+
+.first_right_half > p {
+    color: var(--white);
+    font-size: 14px;
+    width: 60%;
+    line-height: 2.2;
+    margin: 0 auto;
+    margin-top: px;
+}
+
+.first_abstract {
+    position: absolute;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    height: auto;
+    width: auto;
+}
+
+.plus {
+    background-color: var(--white);
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, 50%);
+    clip-path: polygon(40% 0 ,60% 0, 60% 40% , 100% 40% , 100% 60%, 60% 60% , 60% 100% , 40% 100% , 40% 60% , 0 60% , 0 40% , 40% 40% );
+}
+
+.square {
+    background-color: var(--yellow);
+    width: 100px;
+    height: 150px;
+}
+
+.fade_right {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
+.fade_left {
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes bobin {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(30%, 40%);
+    }
+    50% {
+        transform: translate(600%, 200%);
+    }
+    75% {
+        transform: translate(90%, 50%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
